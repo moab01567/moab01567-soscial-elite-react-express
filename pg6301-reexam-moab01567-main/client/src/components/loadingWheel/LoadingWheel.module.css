@@ -1,0 +1,24 @@
+.MainLoadingWheelDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.LoadingWheel {
+  max-height: 60px;
+  max-width: 60px;
+  border: dashed lightblue 10px;
+  border-radius: 50%;
+  animation: infinite linear;
+  animation-name: loadingWheel;
+  animation-duration: 0.5s;
+}
+
+@keyframes loadingWheel {
+  from {
+    border: dashed lightblue 10px;
+  }
+  to {
+    border: dashed lightblue 20px;
+  }
+}

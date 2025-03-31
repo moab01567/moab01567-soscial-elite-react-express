@@ -1,0 +1,32 @@
+{
+  "name": "pg6301-reexam-moab01567",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "concurrently \"npm run server:coverage\" \"npm run client:coverage\"",
+    "server:coverage": "cd server && npm run coverage",
+    "client:coverage": "cd client && npm run coverage",
+    "make_prettier": "npx prettier . --write",
+    "install": "concurrently \"npm run install:client\" \"npm run install:server\"",
+    "install:client": "cd client && npm install",
+    "install:server": "cd server && npm install",
+    "dev": "concurrently \"npm run dev:client\" \"npm run dev:server\"",
+    "dev:client": "cd client && npm run dev",
+    "dev:server": "cd server && npm run dev",
+    "build": " cd client && npm run build",
+    "start": "cd server && npm run start",
+    "prepare": "husky"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@testing-library/react": "^16.2.0",
+    "concurrently": "^9.1.2",
+    "husky": "^9.1.7",
+    "jsdom": "^26.0.0",
+    "prettier": "^3.5.1",
+    "vitest": "^3.0.7"
+  }
+}

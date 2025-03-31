@@ -1,0 +1,38 @@
+.mainDiv {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 60px 2px 1fr 20px;
+  min-height: 300px;
+  min-width: 300px;
+  max-width: 500px;
+  border: solid 5px #f4f4f4;
+  background: #f4f4f4;
+  border-radius: 20px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.topSection {
+  grid-column: 1 / span 6;
+  grid-row: 1;
+}
+
+.lineVertical {
+  background: #a7c7e7;
+  grid-column: 1 / span 6;
+  border-radius: 10px;
+}
+
+.middleSection {
+  text-align: center;
+  grid-column: 1 / span 6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.bottomSection {
+  grid-column: 1 / span 6;
+  grid-row: 4;
+}

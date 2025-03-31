@@ -1,0 +1,30 @@
+.loginBox {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+
+.loginDivBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.loginLinkButton {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 0.5s;
+  text-align: center;
+}
+
+.loginLinkButton:hover {
+  background: #e3e2e2;
+  border: 10px solid #e3e2e2;
+  border-radius: 10px;
+}
