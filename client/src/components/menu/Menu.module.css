@@ -1,0 +1,25 @@
+.nav {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  background: #f4f4f4;
+}
+.navTitle {
+  margin: 10px;
+}
+.navButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 90%;
+  margin: 10px;
+  border: solid 5px #a7c7e7;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.navButton:hover {
+  background: #a7c7e7;
+}
