@@ -15,7 +15,5 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
-          script: |
-            cd social-elite
-            git pull origin main
-            docker compose up --build -d
+          script: | 
+            python3 deploy.py elite
