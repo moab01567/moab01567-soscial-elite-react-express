@@ -84,7 +84,9 @@
 - Ja, dette gjøres. Dersom noe ikke lastes inn grunnet serverproblemer, krasjer ikke hele applikasjonen, men heller bare de områdene hvor komponentene ikke skulle lastes inn. Det vil også stå grunnen til hvorfor. Dersom det er en grunn som ikke skyldes brukeren, vil det komme opp "server error" der komponenten skulle vært.
 
 ---
+
 ## Funksjonelle Krav
+
 - alle kravene følges, jeg syntes bare at npm start skal starte alt sammen? noe som ikke ga helt mening, siden heroku tar den i bruk for å starte serveren og build for å bygge applikajsonen. Vil egt ikke kjøre de to sammtdig siden det kan føre til komplikajsoner.
 - Men det er ikke vansklig bare å gjøre det jeg har gjort med npm run dev på top nivå, så kjører den alt i dev. Bare seg package json filen
 - testene finner du i github actions
