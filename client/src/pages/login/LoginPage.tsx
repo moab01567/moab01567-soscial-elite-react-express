@@ -17,7 +17,7 @@ export function LoginPage({ path }: Props) {
     <div className={style.pageDiv}>
       <div className={style.mainDiv}>
         <h1 className={style.title}>
-          Welcome to <br /> Social Elite News xxxxxxxx
+          Welcome to <br /> Social Elite News
         </h1>
         <div className={style.line}></div>
         <LoginFeature></LoginFeature>

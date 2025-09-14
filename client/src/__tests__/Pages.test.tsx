@@ -68,7 +68,8 @@ describe("Login Page", () => {
     render(<LoginPage path={pageConfig.Login.Path} />);
 
     //assert
-    //expect(screen.getByText("Welcome to Social Elite News")).toBeDefined();
+    expect(screen.getByText("Welcome to Social Elite News")).toBeDefined();
+
     await waitFor(() =>
       expect(screen.getByText("No Articles here")).toBeDefined(),
     );
