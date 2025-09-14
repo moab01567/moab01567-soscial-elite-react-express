@@ -63,7 +63,7 @@ describe("Login Page", () => {
     );
     GETAnonymousArticlesSpy.mockResolvedValue([]);
     render(<LoginPage path={pageConfig.Login.Path} />);
-    expect(screen.getByText("Welcome to Social Elite New")).toBeDefined();
+    expect(screen.getByText("Welcome to Social Elite News")).toBeDefined();
     await waitFor(() =>
       expect(screen.getByText("No Articles here")).toBeDefined(),
     );
