@@ -57,7 +57,7 @@ const articles: APIAnonymousArticle[] = [
 
 describe("Login Page", () => {
   test("Login Page without Anonymous Article ", async () => {
-      //arrange
+    //arrange
     const GETAnonymousArticlesSpy = vi.spyOn(
       articleServiceAn,
       "GETAnonymousArticles",
