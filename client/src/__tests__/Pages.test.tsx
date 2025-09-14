@@ -57,18 +57,13 @@ const articles: APIAnonymousArticle[] = [
 
 describe("Login Page", () => {
   test("Login Page without Anonymous Article ", async () => {
-    //arrange
     const GETAnonymousArticlesSpy = vi.spyOn(
       articleServiceAn,
       "GETAnonymousArticles",
     );
     GETAnonymousArticlesSpy.mockResolvedValue([]);
-
-    //act
     render(<LoginPage path={pageConfig.Login.Path} />);
-
-    //assert
-    //expect(screen.getByText("Welcome to Social Elite News")).toBeDefined();
+    expect(screen.getByText("Welcome to Social Elite News")).toBeDefined();
     await waitFor(() =>
       expect(screen.getByText("No Articles here")).toBeDefined(),
     );
@@ -81,7 +76,7 @@ describe("Login Page", () => {
     );
     GETAnonymousArticlesSpy.mockResolvedValue(articles);
     render(<LoginPage path={pageConfig.Login.Path} />);
-    //expect(screen.getByText("Welcome to Social Elite News")).toBeDefined();
+    expect(screen.getByText("Welcome to Social Elite News")).toBeDefined();
     await waitFor(() =>
       expect(screen.getByText("Title: title1")).toBeDefined(),
     );
