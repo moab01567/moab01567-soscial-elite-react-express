@@ -14,18 +14,14 @@ jobs:
       DATABASE_URL: ${{ secrets.DATABASE_URL }}
       DATABASE: ${{ secrets.DATABASE }}
 
-    strategy:
-      matrix:
-        node-version: [ 22.x ]
-
     steps:
       - name: Check out repo code
         uses: actions/checkout@v4
 
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Setup Node.js version 22.x
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 22.x
           cache: "npm"
 
       - name: Installing project dependency
