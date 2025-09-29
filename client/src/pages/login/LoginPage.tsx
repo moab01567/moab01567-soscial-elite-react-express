@@ -16,7 +16,6 @@ export function LoginPage({ path }: Props) {
   return (
     <div className={style.pageDiv}>
       <div className={style.mainDiv}>
-          fjdfnjdsf
         <h1 className={style.title}>
           Welcome to <br /> Social Elite News
         </h1>
