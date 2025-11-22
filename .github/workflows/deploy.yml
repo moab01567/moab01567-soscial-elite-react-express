@@ -5,10 +5,38 @@ on:
       - main
 jobs:
   build:
-    name: Build
+    name: Build Docker Image
     runs-on: ubuntu-latest
     steps:
-      - name: Execute remote SSH commands using password
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_TOKEN }}
+
+      - name: Build and push with tag commit
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: true
+          tags: ${{ secrets.DOCKER_USERNAME }}/eltie:${{ github.sha }}
+
+      - name: Build and push with tag latest
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: true
+          tags: ${{ secrets.DOCKER_USERNAME }}/elite:latest
+
+  deploy:
+    name: Deploy image
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: SSH commands using password
         uses: appleboy/ssh-action@v1
         with:
           host: ${{ secrets.HOST }}
@@ -16,4 +44,7 @@ jobs:
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
           script: |
-            python3 deploy.py elite
+            cd infra 
+            docker compose pull elite 
+            docker compose stop elite
+            docker compose up elite -d
