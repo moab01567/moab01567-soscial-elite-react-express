@@ -22,7 +22,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/eltie:${{ github.sha }}
+          tags: ${{ secrets.DOCKER_USERNAME }}/elite:${{ github.sha }}
 
       - name: Build and push with tag latest
         uses: docker/build-push-action@v6
