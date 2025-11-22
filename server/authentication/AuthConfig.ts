@@ -6,7 +6,7 @@ import {
 } from "./AuthModules";
 import { ELoginType } from "../../shared/interface";
 
-dotenv.config({ path: "../.env" });
+dotenv.config({ path: "../.elite.env" });
 
 export interface LoginConfig {
   loginType: ELoginType;

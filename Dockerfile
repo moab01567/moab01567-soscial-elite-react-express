@@ -1,4 +1,4 @@
-FROM node:22.12.0 AS Elite
+FROM node:22.12.0 AS elite
 
 WORKDIR /app
 COPY . .
