@@ -9,7 +9,7 @@ import cookieParser from "cookie-parser";
 import { UsersRouter } from "./users/UsersRouter";
 import { ArticlesRouter } from "./articles/ArticlesRouter";
 import { ReactionRouter } from "./reaction/ReactionRouter";
-dotenv.config({ path: "../.env" });
+dotenv.config({ path: "../.elite.env" });
 
 const PORT = process.env.PORT;
 const app = express();

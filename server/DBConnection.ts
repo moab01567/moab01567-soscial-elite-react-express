@@ -1,7 +1,7 @@
 import dotenv from "dotenv";
 import { Db, MongoClient } from "mongodb";
 
-dotenv.config({ path: "../.env" });
+dotenv.config({ path: "../.elite.env" });
 const dataBaseConfig = {
   uri: process.env.DATABASE_URL,
   database: process.env.DATABASE,

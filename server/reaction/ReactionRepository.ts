@@ -6,7 +6,7 @@ import {
 } from "../../shared/ReactionsInterfaceAndEnum";
 import { connectToDatabase } from "../DBConnection";
 
-dotenv.config({ path: "../.env" });
+dotenv.config({ path: "../.elite.env" });
 
 async function getCollection(): Promise<Collection> {
   const db = await connectToDatabase();

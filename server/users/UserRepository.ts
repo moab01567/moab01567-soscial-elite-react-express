@@ -2,7 +2,7 @@ import { Collection } from "mongodb";
 import { APIUsers } from "../../shared/interface";
 import dotenv from "dotenv";
 import { connectToDatabase } from "../DBConnection";
-dotenv.config({ path: "../.env" });
+dotenv.config({ path: "../.elite.env" });
 
 async function getCollection(): Promise<Collection> {
   const db = await connectToDatabase();
